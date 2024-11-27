@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Город фотографии</title>
+  <link rel="icon" href="images/icon.ico">
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg">
+  <link rel="apple-touch-icon" href="images/icon.png">
+  <link rel="stylesheet" href="bootstrap.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<style>
+  @font-face {
+    font-family: "Compact";
+    src: url("fonts/CompactRegular.ttf");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Prestige";
+    src: url("fonts/Prestige.ttf");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body {
+    background-color: #FCFCF5;
+    font-family: "Compact";
+    line-height: normal;
+    color: #0E0C0A;
+  }
+
+</style>
+<body>
+  <div class="container-fluid d-flex justify-content-between p-0 container-entrance">
+    <div class="d-flex flex-column align-items-center w-100 justify-content-between" style="max-width: 540px; margin-top: 50px;">
+      <div class="d-flex flex-column" style="gap: 164px;">
+        <div class="d-flex justify-content-between align-items-center">
+          <a class="nav-link fs-5 text-uppercase p-0" style="line-height: normal; color: #0E0C0A;" aria-current="page" href="#">Помощь</a>
+          <a class="navbar-brand" href="index.html">
+            <img src="images/icon.svg" alt="logo">
+          </a>
+          <a class="nav-link fs-5 text-uppercase p-0" style="line-height: normal; color: #0E0C0A;" aria-current="page" href="#">О проекте</a>
+        </div>
+        <form class="was-validated d-flex flex-column align-items-center gap-40" id="myFormEntrance">
+          <div class="fs-62 text-uppercase w-100">Вход</div>
+          <input type="email" class="form-check-input fs-5 m-0" id="email" name="email" required placeholder="E-mail" aria-label="email"/>
+          <input type="password" class="form-check-input fs-5 m-0" id="password" name="password" required placeholder="Ваш пароль" aria-label="password"/>
+          <button type="submit" class="btn btn-custom text-uppercase fs-18 mb-5" style="width: 343px; background-color: #0E0C0A; border: 0;">Войти в личный кабинет</button>
+        </form>
+      </div>
+      <div class="d-flex flex-column gap-3 h-100 py-6 justify-content-center align-items-center w-100" style="background-color: #0E0C0A;">
+        <div class="fs-18" style="font-family: 'Prestige'; color: #FCFCF5;">У вас нет аккаунта?</div>
+        <a href="registration.html" class="btn-custom fs-18 text-uppercase text-decoration-none" style="width: 343px; color: #0E0C0A; background-color: #FCFCF5; border: none;">зарегистрироваться</a>
+        <button type="button" class="btn-custom fs-18 text-uppercase" style="width: 343px;">оформить подписку</button>
+      </div>
+    </div>
+    <div class="show-before-phone">
+      <img src="images/entrance.png" alt="image" style="width: 100%; height: 100%; object-fit: cover; max-width: 900px;">
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    document.getElementById("myFormEntrance").addEventListener("submit", function(event) {
+      alert("Вы успешно вошли в аккаунт!");
+    });
+
+  </script>
+</body>
+</html>

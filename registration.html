@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Город фотографии</title>
+  <link rel="icon" href="images/icon.ico">
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg">
+  <link rel="apple-touch-icon" href="images/icon.png">
+  <link rel="stylesheet" href="bootstrap.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<style>
+  @font-face {
+    font-family: "Compact";
+    src: url("fonts/CompactRegular.ttf");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Prestige";
+    src: url("fonts/Prestige.ttf");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body {
+    background-color: #0E0C0A;
+    font-family: "Compact";
+    line-height: normal;
+    color: #FCFCF5;
+  }
+
+</style>
+<body>
+  <div class="container-fluid d-flex p-0" style="margin-top: 50px; height: 100vh;">
+    <div class="container p-0 d-flex flex-column align-items-center gap-5">
+      <a href="index.html">
+        <img src="images/icon-light.svg" alt="logo" style="width: 100%; height: 100%; object-fit: contain; max-width: 76px;">
+      </a>
+      <div class="fs-62">Почему быть фотографом <span style="color: #B38B6D;">это охеренно</span></div>
+      <form class="was-validated d-flex flex-column align-items-center gap-40" id="myFormRegistration">
+        <div class="fs-18 text-center" style="font-family: 'Prestige';">Заполняйте форму и регистрируйтесь, это бесплатно</div>
+        <input type="tel" class="form-check-input fs-5 m-0" style="border-bottom: 1px solid #FCFCF5; color: #FCFCF5;" id="tel" name="tel" required placeholder="Телефон" aria-label="tel"/>
+        <input type="email" class="form-check-input fs-5 m-0" style="border-bottom: 1px solid #FCFCF5; color: #FCFCF5;" id="email1" name="email1" required placeholder="E-mail" aria-label="email1"/>
+        <button type="submit" class="btn btn-custom text-uppercase fs-18 mb-5" style="width: 343px; background-color: #FCFCF5; border: 0; color: #0E0C0A;">зарегистрироваться</button>
+        <div class="text-center fs-18" style="font-family: 'Prestige';">Нажимая на кнопку, вы даёте согласие на <a href="#" style="color: #FCFCF5;">обработку персональных данных</a></div>
+      </form>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
