@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Город фотографии</title>
+  <link rel="icon" href="images/icon.ico">
+  <link rel="icon" type="image/svg+xml" href="images/icon.svg">
+  <link rel="apple-touch-icon" href="images/icon.png">
+  <link rel="stylesheet" href="bootstrap.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<style>
+  @font-face {
+    font-family: "Compact";
+    src: url("fonts/compactc.ttf");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Prestige";
+    src: url("fonts/prestige.ttf");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body {
+    background-color: #0E0C0A;
+    font-family: "Compact";
+    line-height: normal;
+    color: #FCFCF5;
+  }
+
+</style>
+<body>
+  <div class="container-fluid p-0">
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" style="display: none;" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content d-flex flex-column mx-auto">
+          <div class="modal-header d-flex flex-column">
+            <button type="button" class="btn-close" style="border: none; background-color: transparent; margin: 0 0 0 auto;" data-bs-dismiss="modal" aria-label="Закрыть">
+              <img src="images/Close.svg" alt="close">
+            </button>
+            <div class="d-flex flex-column" style="gap: 20px;">
+              <div class="fs-62 text-uppercase">Оплатить</div>
+              <div class="d-flex justify-content-between align-items-center text-uppercase fs-4" style="line-height: 0.5px;">
+                <div>доступ на год</div>
+                <div style="color: #B38B6D;">3990 рублей</div>
+              </div>
+              <div class="w-100" style="height: 0px; opacity: 0.2; border: 1px #FCFCF5 solid"></div>
+              <div class="d-flex justify-content-between align-items-center text-uppercase fs-4" style="line-height: 0.5px;">
+                <div>доступ на год</div>
+                <div style="color: #B38B6D;">3990 рублей</div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body d-flex flex-column align-items-center" style="gap: 20px;">
+            <form class="was-validated d-flex flex-column align-items-center" id="myForm" style="gap: 35px;">
+              <div class="d-flex flex-column gap-40">
+                <input type="email" class="form-check-input fs-5 m-0" style="border-bottom: 1px solid #0E0C0A; color: #0E0C0A;" id="email1" name="email1" required placeholder="E-mail" aria-label="email1"/>
+                <input type="password" class="form-check-input fs-5 m-0" style="border-bottom: 1px solid #0E0C0A; color: #0E0C0A;" id="password" name="password" required placeholder="Ваш пароль" aria-label="password"/>
+                <input type="tel" class="form-check-input fs-5 m-0" style="border-bottom: 1px solid #0E0C0A; color: #0E0C0A;" id="tel" name="tel" required placeholder="Телефон" aria-label="tel"/>
+              </div>
+              <button type="submit" class="btn btn-custom text-uppercase fs-18" style="width: 343px; background-color: #B38B6D; border: 0;">Оплатить</button>
+            </form>
+            <div class="w-100" style="height: 0px; opacity: 0.10; border: 1px #0E0C0A solid"></div>
+            <div class="fs-12" style="color: #0E0C0A; font-family: 'Prestige'; line-height: 16px;">Нажимая кнопку оплатить вы даете согласие с <a href="#" style="color: #B38B6D;">Договором оферты</a> и <a href="#" style="color: #B38B6D;">Политикой конфиденциальнсти и обработки персональных данных</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid p-0 container-love">
+      <div class="container d-flex flex-column p-0">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/icon-light.svg" alt="logo">
+        </a>
+        <div class="d-flex flex-column gap-5">
+          <div class="fs-62 text-uppercase" style="color: #B38B6D;">Онлайн-курс Игоря Новикова</div>
+          <div class="fs-135 text-uppercase">Love story</div>
+          <div class="fs-5" style="font-family: 'Prestige';">Снимать настоящую любовь – счастье.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid container-padding" style="background-color: #FCFCF5; color: #0E0C0A;">
+      <div class="container d-flex flex-column gap-5 align-items-center">
+        <div class="fs-62 text-uppercase">Те самые живые фотографии</div>
+        <div>
+          <img src="images/alive-photo.png" alt="image" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-0 d-flex flex-column align-items-center gap-5 mt-80">
+      <div class="fs-62 text-uppercase">Разные <span style="color: #B38B6D;">модели</span></div>
+      <div class="fs-18 text-center" style="font-family: 'Prestige'; line-height: 24px;">Мы не приглашали моделей и актеров, чтобы изображать любовь.  В мастер-классе только настоящие влюбленные пары. Кроме этого, любовь, это не только пары. Мы отсняли еще маму с дочерью и семью с двумя детьми.</div>
+      <div class="d-flex flex-row" style="gap: 20px;">
+        <div class="d-flex" style="gap: 20px;">
+          <div>
+            <img src="images/model1.png" alt="image models" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <div>
+            <img src="images/model2.png" alt="image models" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+        </div>
+        <div class="d-flex" style="gap: 20px;">
+          <div>
+            <img src="images/model3.png" alt="image models" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+          <div>
+            <img src="images/model4.png" alt="image models" style="width: 100%; height: 100%; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid container-padding mt-80" style="background-color: #FCFCF5; color: #0E0C0A;">
+      <div class="container p-0 d-flex flex-column gap-5 align-items-center text-center">
+        <div class="fs-62 text-uppercase">Девять съемок с совершенно разными сюжетами и условиями</div>
+        <div class="fs-18" style="font-family: 'Prestige'; line-height: 24px; max-width: 557px;">На живых мастер-классах вы можете побывать на одной съемке. В этом курсе вы загляните за кулисы не одной, не двух и даже не пяти съемок. И даже не семи или восьми.</div>
+        <button type="button" class="btn-custom fs-18 text-uppercase" style="background-color: #B38B6D; border: none;">застолбить местечко</button>
+      </div>
+    </div>
+
+    <div class="container d-flex flex-column gap-5 align-items-center mt-80">
+      <div class="fs-62 text-uppercase">Разные <span style="color: #B38B6D;">локации</span></div>
+      <div class="fs-18 text-center" style="font-family: 'Prestige';">Нигде не было декора, или подготовленных площадок. Только живые настоящие съемки, как в жизни.</div>
+      <div class="d-flex gap-4">
+        <div>
+          <img src="images/location1.png" alt="image location" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <div>
+          <img src="images/location2.png" alt="image location" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+        <div>
+          <img src="images/location3.png" alt="image location" style="width: 100%; height: 100%; object-fit: contain;">
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid container-padding mt-80" style="background-color: #FCFCF5; color: #0E0C0A;">
+      <div class="container p-0 d-flex flex-column align-items-center gap-5">
+        <div class="fs-62 text-uppercase">Разные сезоны</div>
+        <div class="fs-18 text-center" style="font-family: 'Prestige'; line-height: 24px; max-width: 451px;">Мы снимали в разные сезоны, чтобы вы увидели, что любовь и съемки всесезонны</div>
+        <div class="d-flex flex-column gap-4">
+          <div class="row gap-4">
+            <div class="col">
+              <img src="images/seasons1.png" alt="season image" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div class="col">
+              <img src="images/seasons2.png" alt="season image" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+          </div>
+          <div class="row gap-4">
+            <div class="col">
+              <img src="images/seasons3.png" alt="season image" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+            <div class="col">
+              <img src="images/seasons4.png" alt="season image" style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-0 d-flex flex-column align-items-center gap-5 mt-80">
+      <div class="fs-62 text-center text-uppercase">все это чтобы доказать, что снимать можно <span style="color: #B38B6D;">где угодно, когда угодно и кого угодно</span></div>
+      <button type="button" class="btn-custom fs-18 text-uppercase" style="background-color: #B38B6D; border: none;">Ни слова больше, хочу курс</button>
+      <div>
+        <img src="images/everywhere.png" alt="image place" style="width: 100%; height: 100%; object-fit: contain;">
+      </div>
+    </div>
+
+    <div class="container-fluid container-padding mt-80" style="background-color: #FCFCF5; color: #0E0C0A;">
+      <div class="container d-flex flex-row justify-content-between">
+        <div class="fs-62 text-uppercase">Для тех,  кто серьезно <span style="color: #B38B6D;">готов работать</span></div>
+        <div class="d-flex flex-column gap-5">
+          <div class="d-flex flex-row" style="gap: 20px;">
+            <div>
+              <img src="images/hw.svg" alt="book" style="width: 48px;">
+            </div>
+            <div class="d-flex flex-column gap-3">
+              <div class="fs-4 text-uppercase">Практические ДЗ</div>
+              <div class="fs-18" style="font-family: 'Prestige'; line-height: 24px;">Продуманные задания, которые заставят ваш мозг действительно напрячься и выдать результат, который удивит вас самих. Проверено на более 4 тыс человек.</div>
+            </div>
+          </div>
+          <div class="d-flex flex-row" style="gap: 20px;">
+            <div>
+              <img src="images/check-hw.svg" alt="study hat" style="width: 48px;">
+            </div>
+            <div class="d-flex flex-column gap-3">
+              <div class="fs-4 text-uppercase">Проверка от Ангела Фотовилля</div>
+              <div class="fs-18" style="font-family: 'Prestige'; line-height: 24px;">Опытный куратор, которому я доверил проверку в самом важном проекте — Городе Фотографии.</div>
+            </div>
+          </div>
+          <div class="d-flex flex-row" style="gap: 20px;">
+            <div>
+              <img src="images/diploma.svg" alt="cool" style="width: 48px;">
+            </div>
+            <div class="d-flex flex-column gap-3">
+              <div class="fs-4 text-uppercase">Диплом лично мне</div>
+              <div class="fs-18" style="font-family: 'Prestige'; line-height: 24px;">Лучшие кадры из домашек, как ваше новое портфолио по съемке лавстори. Либо одна новая цельная съемка, которую вы создадите по итогу домашек</div>
+            </div>
+          </div>
+          <div class="fs-14" style="padding: 20px 27px; background-color: #EFEFEA; line-height: 24px; font-family: 'Prestige';">Задания вы получите 22 декабря, и можете выполнять в удобном для вас графике до 11 января. Куратор даст фидбек в течение суток. Работы можно отправлять по мере выполнения. Вебинар со мной будет 14 января.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container p-0 d-flex flex-column gap-5 align-items-center mt-80">
+      <div class="fs-62 text-uppercase">Специальная цена для вас</div>
+      <div class="fs-4 text-uppercase"><span style="color: #B38B6D; letter-spacing: 0.5px;">до конца продаж</span> 6 дней 15:36:23</div>
+      <div class="row flex-row" style="gap: 20px;">
+        <div class="col d-flex flex-column justify-content-between price-box">
+          <div class="d-flex flex-column gap-3">
+            <div class="fs-48 text-uppercase">Месяц</div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Доступ 1 месяц</div>
+            </div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Основной курс, удобно поделенный на главы</div>
+            </div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Все готовые фотографии</div>
+            </div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Расширенные съемки из курса без монтажа</div>
+            </div>
+          </div>
+          <div class="d-flex flex-column gap-3">
+            <div style="height: 0px; opacity: 0.15; border: 1px white solid"></div>
+            <div class="fs-18 text-uppercase" style="opacity: 0.5; letter-spacing: 0.5px;">Цена для всех:  5 9900 рублей</div>
+            <div class="fs-2 text-uppercase" style="color: #B38B6D; letter-spacing: 0.5px;">Для вас: 3 590 рублей</div>
+            <button type="button" class="btn-custom fs-5 text-uppercase" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #B38B6D; border: none;">Оплатить</button>
+          </div>
+        </div>
+        <div class="col d-flex flex-column justify-content-between price-box">
+          <div class="d-flex flex-column gap-3">
+            <div class="fs-48 text-uppercase">Полгода</div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Доступ 6 месяцев</div>
+            </div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Основной курс, удобно поделенный на главы</div>
+            </div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Все готовые фотографии</div>
+            </div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Расширенные съемки из курса без монтажа</div>
+            </div>
+            <div style="height: 0px; opacity: 0.15; border: 1px white solid"></div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check-green.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Список из идей для лавстори</div>
+            </div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check-green.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Вебинар с ответами на вопросы + запись</div>
+            </div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check-green.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Практические ДЗ для самостоятельно выполнения</div>
+            </div>
+          </div>
+          <div class="d-flex flex-column gap-3">
+            <div style="height: 0px; opacity: 0.15; border: 1px white solid"></div>
+            <div class="fs-18 text-uppercase" style="opacity: 0.5; letter-spacing: 0.5px;">Цена для всех:  7 490 рублей</div>
+            <div class="fs-2 text-uppercase" style="color: #B38B6D; letter-spacing: 0.5px;">Для вас: 4 490 рублей</div>
+            <button type="button" class="btn-custom fs-5 text-uppercase" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #B38B6D; border: none;">Оплатить</button>
+          </div>
+        </div>
+        <div class="col d-flex flex-column justify-content-between price-box">
+          <div class="d-flex flex-column gap-3">
+            <div class="fs-48 text-uppercase">навсегда</div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Доступ навсегда</div>
+            </div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Основной курс</div>
+            </div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Все готовые фотографии всех съемок</div>
+            </div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Расширенные съемки из курса без монтажа</div>
+            </div>
+            <div style="height: 0px; opacity: 0.15; border: 1px white solid"></div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check-green.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Список из идей для лавстори</div>
+            </div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check-green.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Вебинар с ответами на вопросы + запись</div>
+            </div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check-green.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Практические дз <span style="background-color: #82A37E;">с проверкой от Ангела Фотовилля</span></div>
+            </div>
+            <div style="height: 0px; opacity: 0.15; border: 1px white solid"></div>
+            <div class="d-flex gap-2">
+              <div>
+                <img src="images/check-red.svg" alt="check">
+              </div>
+              <div class="fs-18" style="font-family: 'Prestige';">Вебинар "Как зарабатывать на чужой любви" от Негинского</div>
+            </div>
+          </div>
+          <div class="d-flex flex-column gap-3">
+            <div style="height: 0px; opacity: 0.15; border: 1px white solid"></div>
+            <div class="fs-18 text-uppercase" style="opacity: 0.5; letter-spacing: 0.5px;">Цена для всех:  10 900 рублей</div>
+            <div class="fs-2 text-uppercase" style="color: #B38B6D; letter-spacing: 0.5px;">Для вас: 7 390 рублей</div>
+            <button type="button" class="btn-custom fs-5 text-uppercase" data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #B38B6D; border: none;">Оплатить</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid container-padding mt-80" style="background-color: #FCFCF5; color: #0E0C0A;">
+      <div class="container d-flex flex-column gap-5 align-items-center">
+        <div class="fs-62 text-uppercase">А если я снимаю видео?</div>
+        <div class="fs-18 text-center" style="font-family: 'Prestige'; line-height: 24px;">Упор курса идет на создание сюжетов, режиссуру и раскрытие моделей. А так же свет, локацию и стиль. В курсе нет информации как снимать видео, делать монтаж, и другие базовые знания, которыми вы уже обладаете. Только создание историй. Поэтому он будет интересен и тем, кто хочет снимать видео лавстори.</div>
+        <div class="fs-4 text-center">Как сказал Кирилл Лаптев: <span style="color: #B38B6D;">«Если бы я этот курс не снимал, я бы его с удовольствием купил».</span></div>
+      </div>
+    </div>
+
+    <footer class="container-fluid mt-80 d-flex flex-column gap-5" style="padding: 0 0 16px;">
+      <div class="w-100" style="height: 0px; opacity: 0.30; border: 1px #FCFCF5 solid"></div>
+      <div class="d-flex flex-column gap-2 fs-12 align-items-center" style="font-family: 'Prestige';">
+        <div>ИП Негинский С.Е.</div>
+        <div>ИНН 772160492397</div>
+        <div>info@willteach.ru</div>
+      </div>
+      <div class="w-100" style="height: 0px; opacity: 0.30; border: 1px #FCFCF5 solid"></div>
+      <div class="container p-0 d-flex justify-content-between fs-12" style="font-family: 'Prestige';">
+        <div>© 2020 willteach.ru. Все права защищены.</div>
+        <div class="d-flex gap-3">
+          <div> Политика конфиденциальности</div>
+          <div>Договор оферты</div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('exampleModal').addEventListener('hidden.bs.modal', function () {
+      document.getElementById('myForm').reset();
+    });
+  </script>
+</body>
+</html>
